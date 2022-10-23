@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "947015259109",
+    "project_id": "shelter-travels-916ce",
+    "storage_bucket": "shelter-travels-916ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947015259109:android:0c45a63ee904dce821d50c",
+        "android_client_info": {
+          "package_name": "com.example.wellpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947015259109-c6b0vr91gq5vkfqv5soda89tgb7qd9fr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wellpaper",
+            "certificate_hash": "37d4d251518684cd21fae3883e0d081cdc3c14e3"
+          }
+        },
+        {
+          "client_id": "947015259109-9cvuh63kiepmclfr3knddqha18bjs1ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoF5j-BPMikeIFEFH4pfzSqJszyW78X4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947015259109-9cvuh63kiepmclfr3knddqha18bjs1ff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

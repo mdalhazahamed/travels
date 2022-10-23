@@ -54,7 +54,7 @@ class OnboardingScreen extends StatelessWidget {
                       children: [
                         Obx(
                           () => Text('${jsonData[_currentIndex.toInt()].title}',
-                              style: AppStyles().myTexstyle),
+                              style: myTexstyle),
                         ),
                         Obx(
                           () => Text(

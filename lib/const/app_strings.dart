@@ -1,3 +1,3 @@
 class AppStings {
-  static const appName = "Traves";
+  static const appName = "Travels";
 }

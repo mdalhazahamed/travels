@@ -37,6 +37,16 @@ dependencies:
   lottie: ^1.4.3
   dots_indicator: ^2.1.0
   font_awesome_flutter: ^10.2.1
+  toggle_switch: ^2.0.1
+  firebase_auth: ^3.11.2
+  firebase_core: ^1.24.0
+  cloud_firestore: ^3.5.1
+  firebase_storage: ^10.3.11
+  fluttertoast: ^8.1.1
+  get_storage: ^2.0.3
+  syncfusion_flutter_pdfviewer: ^20.3.50
+  carousel_slider: ^4.1.1
+  image_picker: ^0.8.6
 
 
   # The following adds the Cupertino Icons font to your application.

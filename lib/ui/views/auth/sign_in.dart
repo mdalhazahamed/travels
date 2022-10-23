@@ -9,12 +9,12 @@ import 'package:wellpaper/ui/route/route.dart';
 import 'package:wellpaper/ui/style/style.dart';
 import 'package:wellpaper/ui/widgets/vio_button.dart';
 
-class SignUp extends StatefulWidget {
+class SignIn extends StatefulWidget {
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<SignIn> createState() => _SignInState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _SignInState extends State<SignIn> {
   TextEditingController _emailController = TextEditingController();
 
   TextEditingController _passwordController = TextEditingController();
@@ -35,21 +35,13 @@ class _SignUpState extends State<SignUp> {
                   Row(
                     children: [
                       Text(
-                        "Create\nYour Accout",
+                        "Login\nTo Your Accout",
                         style: TextStyle(
                           fontSize: 32.sp,
                           color: AppColors.violetColor,
                         ),
                       ),
                     ],
-                  ),
-                  SizedBox(height: 12.h),
-                  Text(
-                    "Create your account and start your jourary......",
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w300,
-                    ),
                   ),
                   SizedBox(height: 30.h),
                   TextFormField(
@@ -105,8 +97,11 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   SizedBox(height: 40.h),
-                  VioletButton("Create Account", () => Auth().registration(_emailController.text, _passwordController.text, context),
-                  ),
+                  VioletButton(
+                  "Login",
+                  () => Auth().login(
+                      _emailController.text, _passwordController.text, context),
+                ),
                   SizedBox(height: 10.h),
                   Text(
                     "--OR--",
@@ -130,22 +125,21 @@ class _SignUpState extends State<SignUp> {
                   SizedBox(height: 10.h),
                   RichText(
                     text: TextSpan(
-                      text: "Alredy an user?",
+                      text: "Don't have registration ?",
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w300,
                           color: Colors.black),
                       children: [
                         TextSpan(
-                          text: " Log In",
-                          style: TextStyle(
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.violetColor,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () => Get.toNamed(signIn),
-                        ),
+                            text: " Sign Up",
+                            style: TextStyle(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.violetColor,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => Get.toNamed(signUp)),
                       ],
                     ),
                   ),

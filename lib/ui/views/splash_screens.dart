@@ -1,12 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:wellpaper/const/app_strings.dart';
 import 'package:wellpaper/ui/route/route.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wellpaper/ui/style/style.dart';
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+
+class SplashScreen extends StatefulWidget {
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  final box = GetStorage();
+
+  Future chooseScreen() async {
+    var userId = box.read("uid");
+    print(userId);
+    if (userId == null) {
+      Get.toNamed(onboarding);
+    } else {
+      Get.toNamed(mainHomeScreen);
+    }
+  }
+
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3), () => chooseScreen());
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +45,7 @@ class SplashScreen extends StatelessWidget {
               SizedBox(height: 10.h),
               Text(
                 AppStings.appName,
-                style: AppStyles().myTexstyle,
+                style: myTexstyle,
               ),
             ],
           ),
