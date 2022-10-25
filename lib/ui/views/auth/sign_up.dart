@@ -69,7 +69,7 @@ class _SignUpState extends State<SignUp> {
                       onSaved: (value) {
                         _emailController.text = value!;
                       },
-                      decoration: textFieldDecorcation(
+                      decoration:AppStyles().textFieldDecoration(
                           "E-mail", Icon(Icons.email_outlined))),
                   SizedBox(height: 15.h),
                   TextFormField(

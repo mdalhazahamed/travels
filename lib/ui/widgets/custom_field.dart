@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget customTextField(title,{maxline}) {
+Widget customTextField(title, controller, {maxline}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -14,12 +14,13 @@ Widget customTextField(title,{maxline}) {
       ),
       Container(
         decoration: BoxDecoration(
-          color: Color(0xFFE9EBED),
+          color: const Color(0xFFE9EBED),
           borderRadius: BorderRadius.all(
             Radius.circular(7.r),
           ),
         ),
         child: TextField(
+          controller: controller,
           maxLines: maxline,
           decoration: InputDecoration(
             border: InputBorder.none,

@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:wellpaper/ui/route/route.dart';
+import 'package:wellpaper/ui/views/button_nav_controller/pages/nav_add_last.dart';
 
-import 'package:wellpaper/ui/widgets/custom_field.dart';
-import 'package:wellpaper/ui/widgets/vio_button.dart';
+import '../../../route/route.dart';
+import '../../../widgets/custom_field.dart';
+import '../../../widgets/vio_button.dart';
 
 class NavAddPage extends StatelessWidget {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _costController = TextEditingController();
+  final TextEditingController _facilityController = TextEditingController();
+  final TextEditingController _destinationController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,12 +33,24 @@ class NavAddPage extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              customTextField("Owner Name"),
-              customTextField("Description"),
-              customTextField("Cost"),
-              customTextField("Facilities", maxline: 4),
-              customTextField("Destination",),
-              VioletButton("Next", ()=>Get.toNamed(navAddLastStep),),
+              customTextField("Owner Name", _nameController),
+              customTextField("Description", _descriptionController),
+              customTextField("Cost", _costController),
+              customTextField("Facilities", _facilityController, maxline: 4),
+              customTextField("Destination", _destinationController),
+              VioletButton(
+                "Next",
+                () => Get.toNamed(
+                  navAddLastStep,
+                  arguments: NavAddLastStep(
+                    name: _nameController.text,
+                    description: _descriptionController.text,
+                    cost: _costController.text,
+                    facility: _facilityController.text,
+                    destination: _destinationController.text,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

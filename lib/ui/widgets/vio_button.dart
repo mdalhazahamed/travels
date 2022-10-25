@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:wellpaper/const/app-colors.dart';
 
-import 'package:wellpaper/ui/style/style.dart';
+import '../../const/app-colors.dart';
 
 class VioletButton extends StatelessWidget {
   String title;
   final Function onAction;
-
   VioletButton(this.title, this.onAction);
 
   RxBool _value = false.obs;
@@ -29,21 +27,34 @@ class VioletButton extends StatelessWidget {
           ),
           child: _value == false
               ? Center(
-                  child: Text(title, style: myTexstyle17),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 17.sp,
+                      color: Colors.white,
+                    ),
+                  ),
                 )
               : Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Please Wait",
-                      style: myTexstyle17,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17.sp,
+                        color: Colors.white,
+                      ),
                     ),
-                    SizedBox(width: 10.w),
+                    SizedBox(
+                      width: 10.w,
+                    ),
                     Transform.scale(
-                      scale: 0.4,
-                      child: CircularProgressIndicator(
-                          backgroundColor: Colors.white),
-                    ),
+                        scale: 0.4,
+                        child: CircularProgressIndicator(
+                          color: Colors.white,
+                        )),
                   ],
                 ),
         ),

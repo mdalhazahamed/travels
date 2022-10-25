@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(height: 10.h),
               Text(
                 AppStings.appName,
-                style: myTexstyle,
+                style: AppStyles().myTextStyle,
               ),
             ],
           ),

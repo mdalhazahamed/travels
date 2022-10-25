@@ -61,7 +61,7 @@ class _SignInState extends State<SignIn> {
                       onSaved: (value) {
                         _emailController.text = value!;
                       },
-                      decoration: textFieldDecorcation(
+                      decoration: AppStyles().textFieldDecoration(
                           "E-mail", Icon(Icons.email_outlined))),
                   SizedBox(height: 15.h),
                   TextFormField(

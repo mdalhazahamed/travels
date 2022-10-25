@@ -3,12 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:toggle_switch/toggle_switch.dart';
-import 'package:wellpaper/busness_logic/form.dart';
-import 'package:wellpaper/const/app-colors.dart';
-import 'package:wellpaper/ui/style/style.dart';
-import 'package:wellpaper/ui/widgets/vio_button.dart';
 
-class UserFrom extends StatelessWidget {
+import '../../busness_logic/form.dart';
+import '../../const/app-colors.dart';
+import '../style/style.dart';
+import '../widgets/vio_button.dart';
+
+class UserForm extends StatelessWidget {
   TextEditingController _nameController = TextEditingController();
   TextEditingController _phoneController = TextEditingController();
   TextEditingController _addressController = TextEditingController();
@@ -125,6 +126,6 @@ Widget FormField(controller, inputType, hint,icon) {
   return TextFormField(
     controller: controller,
     keyboardType: inputType,
-     decoration: textFieldDecorcation(hint,icon)
+    decoration: AppStyles().textFieldDecoration(hint,icon),
   );
 }

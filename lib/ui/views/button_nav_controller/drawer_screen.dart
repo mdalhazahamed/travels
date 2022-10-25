@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:launch_review/launch_review.dart';
 import 'package:wellpaper/const/app_strings.dart';
 import 'package:wellpaper/ui/route/route.dart';
 import 'package:wellpaper/ui/views/button_nav_controller/button_nav_controller.dart';
@@ -40,7 +41,10 @@ class DrawerScreen extends StatelessWidget {
             ),
             drawerItem(
               "Rate US",
-              () {},
+              () => LaunchReview.launch(
+                androidAppId: "com.example.shelter",
+                iOSAppId: "585027354",
+              ),
             ),
             drawerItem(
               "How to Use",

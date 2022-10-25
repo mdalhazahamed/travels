@@ -6,12 +6,10 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:wellpaper/ui/route/route.dart';
 
-
 import '../../theme/app_theme.dart';
 import '../../widgets/drawer_item.dart';
 
 class Settings extends StatelessWidget {
-  
   RxBool darkMode = false.obs;
   final box = GetStorage();
 
@@ -115,7 +113,7 @@ class Settings extends StatelessWidget {
             ),
             drawerItem(
               "Profile".tr,
-              () => Get.toNamed(userForm),
+              () => Get.toNamed(proflie),
             ),
             drawerItem(
               "languages".tr,
